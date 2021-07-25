@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -22,7 +23,6 @@
   <body>
     <div class="container">
       <div class="row top">
-        <div class="col-6"><h1 id="city-name">Deventer</h1></div>
         <div class="col-6">
           <form id="search-city">
             <div class="input-group mb-3">
@@ -43,18 +43,21 @@
             </div>
           </form>
         </div>
+        <div class="col-6">
+          <button class="location">Use current location</button>
+        </div>
       </div>
-      <h3 id="current">Monday, 13:00</h3>
-      <div class="card head">
-        <h2>Today</h2>
 
-        <h3>18℃</h3>
-        <h3>Overcast</h3>
+      <div class="card head">
+        <h1 id="city-name">Some city</h1>
+        <h3 id="current">Monday, 13:00</h3>
+        <h3 class="current-temp">18℃</h3>
+        <h3 class="weather-description">Overcast</h3>
       </div>
-<span><a href="https://github.com/StefanieHoeij/Final-Project" >Open-source code</a> by Stefanie Hoeijmans</span>
+
       <h2 class="subheader">5 Day forcast</h2>
 
-      <div class="card mb-3" style="max-width: 540px">
+      <div class="card mb-3" style="max-width: 540px;">
         <div class="row g-0">
           <div class="col-md-5">
             <img src="images/rain.jpg" alt="rainy" class="card-img" />
@@ -69,7 +72,7 @@
         </div>
       </div>
 
-      <div class="card mb-3" style="max-width: 540px">
+      <div class="card mb-3" style="max-width: 540px;">
         <div class="row g-0">
           <div class="col-md-5">
             <img src="images/sunny.jpg" alt="sunny" class="card-img" />
@@ -91,7 +94,7 @@
         </div>
       </div>
 
-      <div class="card mb-3" style="max-width: 540px">
+      <div class="card mb-3" style="max-width: 540px;">
         <div class="row g-0">
           <div class="col-md-5">
             <img src="images/sunny.jpg" alt="sunny" class="card-img" />
@@ -113,7 +116,7 @@
         </div>
       </div>
 
-      <div class="card mb-3" style="max-width: 540px">
+      <div class="card mb-3" style="max-width: 540px;">
         <div class="row g-0">
           <div class="col-md-5">
             <img src="images/dark-clouds.jpg" alt="sunny" class="card-img" />
@@ -135,7 +138,7 @@
         </div>
       </div>
 
-      <div class="card mb-3" style="max-width: 540px">
+      <div class="card mb-3" style="max-width: 540px;">
         <div class="row g-0">
           <div class="col-md-5">
             <img src="images/rain.jpg" alt="sunny" class="card-img" />
