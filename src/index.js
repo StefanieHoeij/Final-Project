@@ -43,6 +43,14 @@ function showWeather(response) {
   let description = response.data.weather[0].description;
   let displayDescription = document.querySelector("#weather-description");
   displayDescription.innerHTML = description;
+
+  let humidity = response.data.main.humidity;
+  let displayHumidity = document.querySelector("#current-humidity");
+  displayHumidity.innerHTML = humidity;
+
+  let speed = response.data.wind.speed;
+  let displaySpeed = document.querySelector("#current-speed");
+  displaySpeed.innerHTML = speed;
 }
 
 let currentTime = document.querySelector("#current");
