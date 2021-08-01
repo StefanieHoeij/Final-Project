@@ -5,7 +5,7 @@ body {
 
 h1 {
   color: black;
-  text-align: left;
+  text-align: center;
   font-family: "Suez One", serif;
   font-size: 64px;
   font-family: "Catamaran", sans-serif;
@@ -28,9 +28,9 @@ h3 {
   font-family: "Open Sans", sans-serif;
   font-size: 32px;
 }
-h3#current {
-  text-align: left;
-  line-height: 34px;
+h3.weather {
+  text-align: center;
+  font-size: 24px;
 }
 
 h5 {
@@ -60,15 +60,9 @@ div.input-group {
   text-align: center;
   font-size: 20px;
 }
-
 button.location {
   display: block;
-  margin: 15px auto;
+  margin: 20px auto;
   margin-right: 0px;
-  padding: 10px;
-  border-radius: 10px;
-  border: none;
-  background-color: rgb(252, 213, 39);
-  color: navy;
-  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.2);
+  padding: 5px;
 }

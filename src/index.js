@@ -8,7 +8,7 @@ function formatDate() {
     "Wednesday",
     "Thursday",
     "Friday",
-    "Saturday"
+    "Saturday",
   ];
 
   let day = days[date.getDay()];
@@ -37,11 +37,11 @@ function getWeather(city) {
 function showWeather(response) {
   console.log(response);
   let currentTemp = Math.round(response.data.main.temp);
-  let displayTemp = document.querySelector(".current-temp");
+  let displayTemp = document.querySelector("#current-temp");
   displayTemp.innerHTML = `${currentTemp}℃`;
 
   let description = response.data.weather[0].description;
-  let displayDescription = document.querySelector(".weather-description");
+  let displayDescription = document.querySelector("#weather-description");
   displayDescription.innerHTML = description;
 }
 
