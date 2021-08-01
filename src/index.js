@@ -51,6 +51,13 @@ function showWeather(response) {
   let speed = response.data.wind.speed;
   let displaySpeed = document.querySelector("#current-speed");
   displaySpeed.innerHTML = speed;
+
+  let weatherIcon = response.data.weather[0].icon;
+  let displayIcon = document.querySelector("#icon");
+  displayIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`
+  );
 }
 
 let currentTime = document.querySelector("#current");
