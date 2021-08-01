@@ -101,7 +101,7 @@ let celsiusTemperature = null;
 function displayCelsius(event) {
   event.preventDefault();
   let temperature = document.querySelector("#current-temp");
-  temperature.innerHTML = celsiusTemperature;
+  temperature.innerHTML = Math.round(celsiusTemperature);
   fLink.classList.remove("active");
   cLink.classList.add("active");
 }
