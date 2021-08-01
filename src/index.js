@@ -111,3 +111,5 @@ fLink.addEventListener("click", displayFahrenheit);
 
 let cLink = document.querySelector("#c-link");
 cLink.addEventListener("click", displayCelsius);
+
+getWeather("Deventer");
