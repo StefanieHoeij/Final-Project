@@ -66,3 +66,14 @@ button.location {
   margin-right: 0px;
   padding: 5px;
 }
+
+a {
+  text-decoration: none;
+}
+.active {
+  cursor: default;
+  color: black;
+}
+.active:hover {
+  color: black;
+}
