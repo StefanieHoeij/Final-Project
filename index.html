@@ -48,140 +48,71 @@
         </div>
       </div>
 
-      <div class="card head">
-        <h3 id="current">Monday, 13:00</h3>
-        <h1 id="city-name">Deventer</h1>
-        <div class="row">
-          <div class="col-3"><img src="" alt="weather icon" id="icon" /></div>
-          <div class="col-6">
-            <h3 class="weather">
-              <span id="current-temp">18</span>
-              <a href="" class="active" id="c-link">℃</a>|<a href="" id="f-link"
-                >℉</a
-              >
-            </h3>
-            <h3 class="weather" id="weather-description">Overcast</h3>
-          </div>
-          <div class="col-3">
-            <h3 class="weather">
-              Humidity: <span id="current-humidity">0</span>%
-            </h3>
-            <h3 class="weather">
-              Wind: <span id="current-speed">speed</span> km/h
-            </h3>
-          </div>
+      <h1 class="heading" id="city-name">Deventer</h1>
+      <h3 class="heading" id="current">Monday, 13:00</h3>
+      <div class="row">
+        <div class="col-3"><img src="" alt="weather icon" id="icon" /></div>
+        <div class="col-6">
+          <h3 class="weather">
+            <span id="current-temp">18</span>
+            <a href="" class="active" id="c-link">℃</a>|<a href="" id="f-link"
+              >℉</a
+            >
+          </h3>
+          <h3 class="weather" id="weather-description">Overcast</h3>
         </div>
-      </div>
-      <a href="https://github.com/StefanieHoeij/Final-Project" target="_blanc">
-        Open-source code</a
-      >
-      by Stefanie Hoeijmans
-
-      <h2 class="subheader">5 Day forcast</h2>
-
-      <div class="card mb-3" style="max-width: 540px">
-        <div class="row g-0">
-          <div class="col-md-5">
-            <img src="images/rain.jpg" alt="rainy" class="card-img" />
-          </div>
-          <div class="col-md-7">
-            <div class="card-body">
-              <h5 class="card-title">Tomorrow</h5>
-              <div class="card-text">16℃</div>
-              <div class="card-text">Rainy</div>
-            </div>
-          </div>
+        <div class="col-3">
+          <h4>Humidity: <span id="current-humidity">0</span>%</h4>
+          <h4>Wind: <span id="current-speed">speed</span> km/h</h4>
         </div>
       </div>
 
-      <div class="card mb-3" style="max-width: 540px">
-        <div class="row g-0">
-          <div class="col-md-5">
-            <img src="images/sunny.jpg" alt="sunny" class="card-img" />
-          </div>
-          <div class="col-md-7">
-            <div class="card-body">
-              <h5 class="card-title">Tuesday</h5>
-
-              <div class="row">
-                <div class="col-md-6">
-                  <p class="card-text">21℃</p>
-                </div>
-                <div class="col-md-6">
-                  <p class="card-text">Sunny</p>
-                </div>
-              </div>
-            </div>
+      <div class="row weather-forecast">
+        <div class="col-4 forecast-tomorrow">
+          <div class="card-body">
+            <h5 class="card-title">Tomorrow</h5>
+            <div class="card-text">16℃</div>
+            <div class="card-text">Rainy</div>
           </div>
         </div>
-      </div>
 
-      <div class="card mb-3" style="max-width: 540px">
-        <div class="row g-0">
-          <div class="col-md-5">
-            <img src="images/sunny.jpg" alt="sunny" class="card-img" />
-          </div>
-          <div class="col-md-7">
-            <div class="card-body">
-              <h5 class="card-title">Wednesday</h5>
-
-              <div class="row">
-                <div class="col-md-6">
-                  <p class="card-text">23℃</p>
-                </div>
-                <div class="col-md-6">
-                  <p class="card-text">Sunny</p>
-                </div>
-              </div>
-            </div>
+        <div class="col-2">
+          <div class="card-body">
+            <h5 class="card-title">Tue</h5>
+            <div class="card-text">21℃</div>
+            <div class="card-text">Sunny</div>
           </div>
         </div>
-      </div>
 
-      <div class="card mb-3" style="max-width: 540px">
-        <div class="row g-0">
-          <div class="col-md-5">
-            <img src="images/dark-clouds.jpg" alt="sunny" class="card-img" />
-          </div>
-          <div class="col-md-7">
-            <div class="card-body">
-              <h5 class="card-title">Thursday</h5>
-
-              <div class="row">
-                <div class="col-md-6">
-                  <p class="card-text">19℃</p>
-                </div>
-                <div class="col-md-6">
-                  <p class="card-text">cloudy</p>
-                </div>
-              </div>
-            </div>
+        <div class="col-2">
+          <div class="card-body">
+            <h5 class="card-title">Wed</h5>
+            <div class="card-text">21℃</div>
+            <div class="card-text">Sunny</div>
           </div>
         </div>
-      </div>
 
-      <div class="card mb-3" style="max-width: 540px">
-        <div class="row g-0">
-          <div class="col-md-5">
-            <img src="images/rain.jpg" alt="sunny" class="card-img" />
+        <div class="col-2">
+          <div class="card-body">
+            <h5 class="card-title">Thu</h5>
+            <div class="card-text">21℃</div>
+            <div class="card-text">Sunny</div>
           </div>
-          <div class="col-md-7">
-            <div class="card-body">
-              <h5 class="card-title">Friday</h5>
+        </div>
 
-              <div class="row">
-                <div class="col-md-6">
-                  <p class="card-text">18℃</p>
-                </div>
-                <div class="col-md-6">
-                  <p class="card-text">Rainy</p>
-                </div>
-              </div>
-            </div>
+        <div class="col-2">
+          <div class="card-body">
+            <h5 class="card-title">Fri</h5>
+            <div class="card-text">21℃</div>
+            <div class="card-text">Sunny</div>
           </div>
         </div>
       </div>
     </div>
+    <a href="https://github.com/StefanieHoeij/Final-Project" target="_blanc">
+      Open-source code</a
+    >
+    by Stefanie Hoeijmans
     <script src="src/index.js"></script>
   </body>
 </html>
