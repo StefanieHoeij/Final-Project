@@ -108,3 +108,8 @@ a {
   font-size: 16px;
   margin-bottom: 24px;
 }
+
+img.weather-icon {
+  max-width: 50px;
+  max-height: 50px;
+}

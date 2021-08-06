@@ -17,6 +17,34 @@ function formatDate() {
 
   return `${day}, ${hour}:${minutes}`;
 }
+
+function displayForecast() {
+  let forecast = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row weather-forecast">`;
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+          <div class="col-2">
+            <div class="card-body">
+              <h5 class="card-title">${day}</h5>
+              <div class="card-text">16℃</div>
+              <img
+                class="weather-icon"
+                src="http://openweathermap.org/img/wn/10d@2x.png"
+                alt=""
+              />
+            </div>
+          </div>
+`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecast.innerHTML = forecastHTML;
+}
+
 //display the city name as H1
 function displayCity(event) {
   event.preventDefault();
@@ -113,3 +141,4 @@ let cLink = document.querySelector("#c-link");
 cLink.addEventListener("click", displayCelsius);
 
 getWeather("Deventer");
+displayForecast();
