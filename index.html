@@ -22,56 +22,67 @@
   </head>
   <body>
     <div class="container">
-      <div class="row top">
-        <div class="col-6">
-          <form id="search-city">
-            <div class="input-group mb-3">
-              <input
-                type="text"
-                class="form-control"
-                id="input-city"
-                placeholder="Enter city"
-                aria-describedby="button-addon2"
-              />
-              <button
-                class="btn btn-outline-secondary"
-                type="submit"
-                id="button-addon2"
-              >
-                Search
-              </button>
-            </div>
-          </form>
+      <div class="weather-app">
+        <div class="row top">
+          <div class="col-6">
+            <form id="search-city">
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="input-city"
+                  placeholder="Enter city"
+                  aria-describedby="button-addon2"
+                />
+                <button
+                  class="btn btn-outline-secondary"
+                  type="submit"
+                  id="button-addon2"
+                >
+                  Search
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="col-6">
+            <button class="btn btn-primary location">
+              Use current location
+            </button>
+          </div>
         </div>
-        <div class="col-6">
-          <button class="btn btn-primary location">Use current location</button>
-        </div>
-      </div>
 
-      <h1 class="heading" id="city-name">Deventer</h1>
-      <h3 class="heading" id="current">Monday, 13:00</h3>
-      <div class="row">
-        <div class="col-3"><img src="" alt="weather icon" id="icon" /></div>
-        <div class="col-6">
-          <h3 class="weather">
-            <span id="current-temp">18</span>
-            <a href="" class="active" id="c-link">℃</a>|<a href="" id="f-link"
-              >℉</a
-            >
-          </h3>
-          <h3 class="weather" id="weather-description">Overcast</h3>
+        <h1 class="heading" id="city-name">Deventer</h1>
+        <h3 class="heading" id="current">Monday, 13:00</h3>
+        <div class="row">
+          <div class="col-3 icon">
+            <img src="" alt="weather icon" id="icon" />
+          </div>
+          <div class="col-6">
+            <h3 class="weather">
+              <span id="current-temp">18</span>
+              <a href="" class="active" id="c-link">℃</a>|<a href="" id="f-link"
+                >℉</a
+              >
+            </h3>
+            <h3 class="weather" id="weather-description">Overcast</h3>
+          </div>
+          <div class="col-3">
+            <h4>Humidity: <span id="current-humidity">0</span>%</h4>
+            <h4>Wind: <span id="current-speed">speed</span> km/h</h4>
+          </div>
         </div>
-        <div class="col-3">
-          <h4>Humidity: <span id="current-humidity">0</span>%</h4>
-          <h4>Wind: <span id="current-speed">speed</span> km/h</h4>
-        </div>
+        <div id="forecast"></div>
       </div>
-      <div id="forecast"></div>
+      <small
+        ><a
+          href="https://github.com/StefanieHoeij/Final-Project"
+          target="_blanc"
+        >
+          Open-source code</a
+        >
+        by Stefanie Hoeijmans</small
+      >
     </div>
-    <a href="https://github.com/StefanieHoeij/Final-Project" target="_blanc">
-      Open-source code</a
-    >
-    by Stefanie Hoeijmans
     <script src="src/index.js"></script>
   </body>
 </html>
