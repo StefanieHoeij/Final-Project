@@ -18,7 +18,8 @@ function formatDate() {
   return `${day}, ${hour}:${minutes}`;
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecast = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row weather-forecast">`;
@@ -45,6 +46,13 @@ function displayForecast() {
   forecast.innerHTML = forecastHTML;
 }
 
+function getForecast(coordinates) {
+  let apiKey = "bc964bce7673159981cbd9d3c7760ee6";
+  let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude=minutely&appid=${apiKey}&units=metric`;
+
+  axios.get(apiURL).then(displayForecast);
+}
+
 //display the city name as H1
 function displayCity(event) {
   event.preventDefault();
@@ -63,7 +71,6 @@ function getWeather(city) {
 }
 //display the current weather for that city
 function showWeather(response) {
-  console.log(response);
   let currentTemp = Math.round(response.data.main.temp);
   let displayTemp = document.querySelector("#current-temp");
   displayTemp.innerHTML = currentTemp;
@@ -88,6 +95,8 @@ function showWeather(response) {
     "src",
     `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`
   );
+
+  getForecast(response.data.coord);
 }
 
 let currentTime = document.querySelector("#current");
@@ -141,4 +150,3 @@ let cLink = document.querySelector("#c-link");
 cLink.addEventListener("click", displayCelsius);
 
 getWeather("Deventer");
-displayForecast();
